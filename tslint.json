@@ -1,0 +1,9 @@
+{
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "prettier": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}
