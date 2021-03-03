@@ -1,10 +1,13 @@
 import { Request, Response } from 'express';
 import StatusCodes from 'http-status-codes';
-import ChartDao from '@daos/Chart/ChartDao';
-import { chartAlreadyExistsError, noChartExistsError } from '@shared/constants';
-import transposeChart from '@shared/transposeChart';
+import ChartDao from '../daos/Chart/ChartDao';
+import {
+  chartAlreadyExistsError,
+  noChartExistsError,
+} from '../shared/constants';
+import transposeChart from '../shared/transposeChart';
 import Chart from 'src/models/Chart';
-import { KeyTypes } from '@shared/keys';
+import { KeyTypes } from '../shared/keys';
 
 const { BAD_REQUEST, CREATED, OK } = StatusCodes;
 

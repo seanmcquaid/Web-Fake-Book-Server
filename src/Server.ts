@@ -8,8 +8,8 @@ import 'express-async-errors';
 import cors from 'cors';
 
 import BaseRouter from './routes';
-import logger from '@shared/Logger';
-import { connectDb } from '@daos/Db';
+import logger from './shared/Logger';
+import { connectDb } from './daos/Db';
 
 const app = express();
 const { BAD_REQUEST } = StatusCodes;
