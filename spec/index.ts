@@ -14,12 +14,7 @@ const options = commandLineArgs([
 ]);
 
 // Set the env file
-const result2 = dotenv.config({
-  path: `./src/pre-start/env/test.env`,
-});
-if (result2.error) {
-  throw result2.error;
-}
+dotenv.config();
 
 // Init Jasmine
 const jasmine = new Jasmine(null);
@@ -36,8 +31,10 @@ jasmine.loadConfig({
 jasmine.onComplete((passed: boolean) => {
   if (passed) {
     logger.info('All tests have passed :)');
+    process.exit();
   } else {
     logger.err('At least one test has failed :(');
+    process.exit(400);
   }
 });
 

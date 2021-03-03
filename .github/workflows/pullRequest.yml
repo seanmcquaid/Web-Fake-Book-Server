@@ -5,6 +5,15 @@ on:
 jobs:
   unit-tests:
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: testing
+      PORT: 8080
+      HOST: localhost
+      JET_LOGGER_MODE: FILE
+      JET_LOGGER_FILEPATH: jet-logger.log
+      JET_LOGGER_TIMESTAMP: TRUE
+      JET_LOGGER_FORMAT: LINE
+      MONGO_URL: ${{ secrets.MONGO_URL }}
     steps:
       - name: Setup GHA
         uses: actions/checkout@v2
@@ -16,13 +25,3 @@ jobs:
         uses: borales/actions-yarn@v2.0.0
         with:
           cmd: test
-  cypress-tests:
-    runs-on: ubuntu-16.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Make envfile
-        uses: SpicyPizza/create-envfile@v1
-        with:
-          envkey_REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}
-          file_name: .env
