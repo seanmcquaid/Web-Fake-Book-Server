@@ -31,10 +31,11 @@ jasmine.loadConfig({
 jasmine.onComplete((passed: boolean) => {
   if (passed) {
     logger.info('All tests have passed :)');
+    process.exit();
   } else {
     logger.err('At least one test has failed :(');
+    process.exit(400);
   }
-  process.exit();
 });
 
 // Run all or a single unit-test
