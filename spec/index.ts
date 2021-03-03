@@ -34,6 +34,7 @@ jasmine.onComplete((passed: boolean) => {
   } else {
     logger.err('At least one test has failed :(');
   }
+  process.exit();
 });
 
 // Run all or a single unit-test
