@@ -15,11 +15,11 @@ jobs:
           heroku_app_name: 'web-fake-book-server'
           heroku_email: 'sean.m.mcquaid@gmail.com'
         env:
-          NODE_ENV: production
-          PORT: 8080
-          HOST: localhost
-          JET_LOGGER_MODE: FILE
-          JET_LOGGER_FILEPATH: jet-logger.log
-          JET_LOGGER_TIMESTAMP: TRUE
-          JET_LOGGER_FORMAT: LINE
-          MONGO_URL: ${{ secrets.MONGO_URL }}
+          HD_NODE_ENV: production
+          HD_PORT: 8080
+          HD_HOST: localhost
+          HD_JET_LOGGER_MODE: FILE
+          HD_JET_LOGGER_FILEPATH: jet-logger.log
+          HD_JET_LOGGER_TIMESTAMP: TRUE
+          HD_JET_LOGGER_FORMAT: LINE
+          HD_MONGO_URL: ${{ secrets.MONGO_URL }}
