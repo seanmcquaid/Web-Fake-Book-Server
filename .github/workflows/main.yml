@@ -14,6 +14,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: 'web-fake-book-server'
           heroku_email: 'sean.m.mcquaid@gmail.com'
+          env_file: '.env'
         env:
           NODE_ENV: production
           PORT: 8080

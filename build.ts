@@ -10,6 +10,8 @@ logger.timestamp = false;
   try {
     // Remove current build
     await remove('./dist/');
+    // Copy production env file
+    await copy('.env', './dist/pre-start/env/production.env');
     // Copy back-end files
     await exec('tsc --build tsconfig.prod.json', './');
   } catch (err) {
