@@ -8,15 +8,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Create env file
-        run: touch .env
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: 'web-fake-book-server'
           heroku_email: 'sean.m.mcquaid@gmail.com'
-          env_file: '.env'
         env:
           NODE_ENV: production
           PORT: 8080
