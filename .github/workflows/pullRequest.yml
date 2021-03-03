@@ -6,7 +6,7 @@ jobs:
   unit-tests:
     runs-on: ubuntu-latest
     env:
-      NODE_ENV: production
+      NODE_ENV: testing
       PORT: 8080
       HOST: localhost
       JET_LOGGER_MODE: FILE
@@ -21,6 +21,9 @@ jobs:
         uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install
+      - name: Add nodemon globally
+        run: |
+          yarn global add nodemon
       - name: Run Unit Tests
         uses: borales/actions-yarn@v2.0.0
         with:
