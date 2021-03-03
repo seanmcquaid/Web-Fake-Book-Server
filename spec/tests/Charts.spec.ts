@@ -117,6 +117,7 @@ describe('Charts Routes', () => {
           pErr(err);
           expect(res.status).toBe(CREATED);
           expect(res.body.error).toBeUndefined();
+          expect(true).toEqual(false);
           done();
         });
     });
