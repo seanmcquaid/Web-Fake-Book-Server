@@ -3,7 +3,8 @@
 ## Architecture
 
 - Mongoose + MongoDB
-- Express/Node
+- Node.js + TypeScript
+- Express
 
 ## Testing Strategy
 
