@@ -1,5 +1,31 @@
 # Web Fake Book - Client
 
+## Project Setup
+
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+
+```
+yarn start:dev
+```
+
+### Compiles and minifies for production
+
+```
+yarn build
+```
+
+### Run your unit tests
+
+```
+yarn test
+```
+
+##
+
 ## Architecture
 
 - Mongoose + MongoDB
